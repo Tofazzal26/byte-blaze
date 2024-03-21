@@ -1,11 +1,5 @@
-import Home from "./Pages/Home/Home";
-
 function App() {
-  return (
-    <div className="poppins">
-      <Home />
-    </div>
-  );
+  return <div className="poppins"></div>;
 }
 
 export default App;
