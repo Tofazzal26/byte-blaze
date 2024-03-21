@@ -1,7 +1,9 @@
+import Hero from "./Hero";
+
 const Home = () => {
   return (
-    <div>
-      <h2 className="text-center">This is a home pages</h2>
+    <div className="flex flex-col justify-center items-center min-h-[calc(100vh-132px)]">
+      <Hero />
     </div>
   );
 };
