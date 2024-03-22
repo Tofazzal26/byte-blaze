@@ -2,11 +2,16 @@ import { useState } from "react";
 import { Outlet, useLoaderData } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { MdBookmarkAdd } from "react-icons/md";
+import { saveBlogs } from "../../utilities";
 
 const BlogDetails = () => {
   const blogDetail = useLoaderData();
 
   const [isToggle, setIsToggle] = useState(0);
+
+  const handleBookmarks = (bookmarks) => {
+    saveBlogs(bookmarks);
+  };
 
   const {
     comments_count,
@@ -84,7 +89,10 @@ const BlogDetails = () => {
             </svg>
             <span>Author</span>
           </NavLink>
-          <div className="bg-primary p-3 ml-5 rounded-full hover:bg-opacity-30 bg-opacity-20 cursor-pointer hover:scale-105 overflow">
+          <div
+            onClick={() => handleBookmarks(blogDetail)}
+            className="bg-primary p-3 ml-5 rounded-full hover:bg-opacity-30 bg-opacity-20 cursor-pointer hover:scale-105 overflow"
+          >
             <MdBookmarkAdd size={20} className="text-primary" />
           </div>
         </div>
