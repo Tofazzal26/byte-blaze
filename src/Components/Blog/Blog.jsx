@@ -7,7 +7,7 @@ const Blog = ({ card }) => {
     <NavLink
       rel="noopener noreferrer"
       to={`/blog/${id}`}
-      className="max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-900"
+      className="max-w-sm mx-auto group hover:no-underline transition hover:scale-105 focus:no-underline bg-gray-900"
     >
       <img
         role="presentation"
