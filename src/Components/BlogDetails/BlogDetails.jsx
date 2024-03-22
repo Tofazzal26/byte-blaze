@@ -42,7 +42,7 @@ const BlogDetails = () => {
             href="#"
             className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
               isToggle === 0 ? "border border-b-0" : "border-b"
-            } rounded-t-lg border-gray-400 text-gray-50`}
+            } rounded-t-lg border-gray-400 text-black font-bold`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ const BlogDetails = () => {
             href="#"
             className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
               isToggle === 1 ? "border border-b-0" : "border-b"
-            } rounded-t-lg border-gray-400 text-gray-50`}
+            } rounded-t-lg border-gray-400 text-black font-bold`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -85,20 +85,7 @@ const BlogDetails = () => {
         </div>
         <Outlet />
       </article>
-      <div>
-        <div className="flex flex-wrap py-6 gap-2 border-t border-dashed border-gray-400">
-          {tags.map((tag, ind) => (
-            <a
-              key={ind}
-              rel="noopener noreferrer"
-              href="#"
-              className="px-3 py-1 rounded-sm hover:underline bg-violet-400 text-gray-900"
-            >
-              #{tag}
-            </a>
-          ))}
-        </div>
-      </div>
+      <div></div>
     </div>
   );
 };
