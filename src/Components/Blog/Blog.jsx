@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 import notFound from "../../assets/404.jpg";
-const Blog = ({ card, deleteAble }) => {
+import { MdDeleteForever } from "react-icons/md";
+
+const Blog = ({ card, deleteAble, handleDelete }) => {
   const { id, cover_image, title, description, created_at } = card;
 
   return (
-    <div className="flex relative">
+    <div className="flex relative mt-8">
       <NavLink
         rel="noopener noreferrer"
         to={`/blog/${id}`}
@@ -25,7 +27,14 @@ const Blog = ({ card, deleteAble }) => {
           <p>{description}</p>
         </div>
       </NavLink>
-      {deleteAble && <div>Delete</div>}
+      {deleteAble && (
+        <div
+          onClick={() => handleDelete(id)}
+          className="absolute bg-primary p-3 rounded-full cursor-pointer -top-4 right-8 hover:scale-105 hover:bg-secondary"
+        >
+          <MdDeleteForever size={20} className=" group-hover:text-primary " />
+        </div>
+      )}
     </div>
   );
 };
