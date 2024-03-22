@@ -22,9 +22,12 @@ const Nav = () => {
     <div>
       <div className="navbar bg-base-100 shadow-lg px-12 fixed">
         <div className="flex-1">
-          <a className="btn btn-ghost text-[#ff3ef2] gap-0 font-bold text-3xl">
+          <NavLink
+            to="/"
+            className="btn btn-ghost text-[#ff3ef2] gap-0 font-bold text-3xl"
+          >
             Byte<span className="text-primary">Blaze</span>
-          </a>
+          </NavLink>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 gap-8 text-xl mr-8 font-bold">
